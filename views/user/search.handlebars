@@ -1,0 +1,26 @@
+<div id="RCP1">
+<h2>The searched Result</h2>
+<br>
+<ul class = "unordered-list" >
+    <li><label class = "information">Book ISBN : </label>{{book.ISBN}}</li>
+    <li><label class = "information">Book Name : </label>{{book.name}}</li>
+    <li><label class = "information">Book Author : </label>{{book.author}}</li>
+    <li><label class = "information">Book Edition : </label>{{book.edition}}</li>
+    <li><label class = "information">Book Category : </label>{{book.category}}</li>
+    <li><label class = "information">URL : </label><a href="{{book.url}}">{{book.url}}</a></li>
+    <li><label class = "information">Comments : </label><br>
+    {{#each comment}} <b>poster</b>: {{this.poster}}, <b>comment</b>: {{this.comment}}</li>
+    {{/each}}
+</ul>
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+<br><br>
+    <h4>To add above book to your library click Add</h4>
+    <form method="post" action="users/search">
+    <button type="submit" class="btn btn-primary">Add</button></form>
+    
+
+</div>

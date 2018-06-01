@@ -1,0 +1,14 @@
+<h2 class="page-header">Search for Books</h2>
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+<form method="post" action="/users/booksDetails">
+
+    <div class="form-group">
+        <label>Book ISBN</label>
+        <input type = "number" class = "form-control" name = "bookISBN" placeholder="Provide ISBN of the book">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

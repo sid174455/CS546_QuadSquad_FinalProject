@@ -1,0 +1,40 @@
+<h2 class="page-header">Add Books to public library</h2>
+{{#if errors}}
+    {{#each errors}}
+        <div class="alert alert-danger">{{msg}}</div>
+    {{/each}}
+{{/if}}
+<form method="post" action="/users/books">
+
+<div class="form-group">
+    <label>Book ISBN</label>
+    <input type="number" class="form-control" name="isbn" placeholder="Provide ISBN of the book">
+</div>
+
+<div class="form-group">
+    <label>Book name</label>
+    <input type="text" class="form-control" name="bookName" placeholder="Provide title of the book">
+</div>
+
+<div class="form-group">
+    <label>Book author</label>
+    <input type="text" class="form-control" name="author" placeholder="Provide author of the book">
+</div>
+
+<div class="form-group">
+    <label>Book edition</label>
+    <input type="number" class="form-control" name="edition" placeholder="Provide edition of the book">
+</div>
+
+<div class="form-group">
+    <label>Book category</label>
+    <input type = "text" class = "form-control" name="cat" placeholder="Provide category of the book">
+</div>
+
+<div class="form-group">
+    <label>URL</label>
+    <input type = "url" class = "form-control" name="url" placeholder="Provide URL of the book">
+</div>
+
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>

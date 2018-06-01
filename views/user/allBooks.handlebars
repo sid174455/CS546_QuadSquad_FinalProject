@@ -1,0 +1,27 @@
+<h2>All Books</h2>
+Showing list of all books in public library:
+<br><br>
+
+    <table>
+        <thead>
+            <th>Book ISBN</th>
+            <th>Book Name</th>
+            <th>Book Author</th>
+            <th>Book Edition</th>
+            <th>Book Category</th>
+            <th>URL</th>
+        </thead>
+        
+        <tbody>
+            {{#each book}}
+            <tr>
+                <td>{{this.ISBN}}</td>
+                <td>{{this.name}}</td>
+                <td>{{this.author}}</td>
+                <td>{{this.edition}}</td>
+                <td>{{this.category}}</td>
+                <td><a href="{{this.url}}">{{this.url}}</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
