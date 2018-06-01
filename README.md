@@ -1,2 +1,0 @@
-# CS546_QuadSquad_FinalProject
-CS546_Web_Programming_Project
